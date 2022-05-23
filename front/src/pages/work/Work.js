@@ -14,6 +14,7 @@ import sqlServerLogo from '../../assets/icons/sqlserver.png'
 import azureLogo from '../../assets/icons/azure.png'
 import logicAppsLogo from '../../assets/icons/logicapps.png'
 
+
 export const Work = () => {
   return (
     <main id="main-wrapper">
