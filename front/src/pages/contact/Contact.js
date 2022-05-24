@@ -1,6 +1,5 @@
 import './Contact.css';
 import { useState } from 'react'
-// import { GoogleReCaptcha } from 'react-google-recaptcha-v3';
 
 
 const INITIAL_CONTACT = {
@@ -12,11 +11,6 @@ const INITIAL_CONTACT = {
 export const Contact = () => {
     const [contact, setContact] = useState(INITIAL_CONTACT)
     const [verified, setVerified] = useState(false)
-
-
-    // const handleVerify = function() {
-    //     setVerified(true)
-    // }
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -62,7 +56,7 @@ export const Contact = () => {
                 <article id="contact-content">
                     <h1 id="contact-title">Let's talk.</h1>
                     <p id="contact-p">Have a question or want to work together? <br/>Get in touch via the form below, or
-                        by emailing <a href="mailto:47alexso@gmail.com">47alexso@gmail.com</a>.
+                        by emailing <a href="mailto:alexsanor13@gmail.com">alexsanor13@gmail.com</a>.
                     </p>
                     <form id="contact-form" onSubmit={handleSubmit}>
                         <label htmlFor="name">Name:</label>
@@ -74,7 +68,6 @@ export const Contact = () => {
                         <label htmlFor="message">Message:</label>
                         <textarea name="message" placeholder="Enter your message" maxLength="2000" value={contact.message} onChange={handleMessage} required></textarea>
                         <br/>
-                        {/* <GoogleReCaptcha onVerify={handleVerify} /> */}
                         <button className="btn-two" type="submit"><span>Submit</span></button>
                     </form>
                 </article>

@@ -19,10 +19,6 @@ export const Footer = () => {
                 </li>
             </ul>
             <p>Alex Sanchez <span>&copy;2021</span></p>
-            {/* <br/>
-            <p id='recaptcha-msg'>This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy"><span>Privacy Policy</span></a>{" and " }
-                <a href="https://policies.google.com/terms"><span>Terms of Service</span></a> apply.
-            </p> */}
         </div>
     </footer>
   );

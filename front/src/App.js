@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { Header } from './components/common/header/Header.js'
@@ -7,18 +8,44 @@ import { About } from './pages/about/About.js'
 import { Work } from './pages/work/Work.js'
 import { Blog } from './pages/blog/Blog.js'
 import { Contact } from './pages/contact/Contact.js'
-// import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 
-// const RECAPTCHA_API_KEY = process.env.REACT_APP_RECAPTCHA_API_KEY;
 
 function App() {
+	const [currentPage, setPage] = useState(window.location.href)
+
+	useEffect(() => {
+		let docs = []
+		docs = docs.concat(document.getElementById('home-page'));
+		docs = docs.concat(document.getElementById('about-page'));
+		docs = docs.concat(document.getElementById('work-page'));
+		docs = docs.concat(document.getElementById('blog-page'));
+		docs = docs.concat(document.getElementById('contact-page'));
+		docs.forEach(e => {
+			if(e){
+				let path = e.getAttribute('href')
+				let actual = window.location.href.split('/')
+				if (path === '/' + actual[actual.length - 1]) {
+					e.style.color = '#f6a53b';
+				}
+				else{
+				e.style.color = '#ffffff';
+				}
+			}
+		})
+	}, [currentPage])
+
+	const handlePage = (page) => {
+		setPage(page)
+		let header = document.getElementById("header");
+		header.className = 'hidden';
+	}
+
 	return (
-		// <GoogleReCaptchaProvider reCaptchaKey={RECAPTCHA_API_KEY}>
 			<Router>
 			<div className="App">
-				<Header />
+				<Header handlePage={handlePage}/>
 				<Switch>
-					<Route exact path="/" component={Home} />
+					<Route exact path="/" render={()=> <Home handlePage={handlePage} />} />
 					<Route path="/about" component={About} />
 					<Route path="/work" component={Work} />
 					<Route path="/blog" component={Blog} />
@@ -27,7 +54,6 @@ function App() {
 				<Footer />
 			</div>
 			</Router>
-		// </GoogleReCaptchaProvider>
 	);
 }
 
