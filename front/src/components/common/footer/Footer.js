@@ -4,14 +4,14 @@ export const Footer = () => {
         <div id="social-media">
             <ul>
                 <li>
-                    <a href='https://www.linkedin.com/in/alexso13997/'>
+                    <a href='https://www.linkedin.com/in/alexso13997/' target="_blank" rel="noopener noreferrer">
                         <span>
                             <i className="fab fa-linkedin"></i>
                         </span>
                     </a>
                 </li>
                 <li>
-                    <a href='https://github.com/Alexso47'>
+                    <a href='https://github.com/Alexso47' target="_blank" rel="noopener noreferrer">
                         <span>
                             <i className="fab fa-github-square"></i>
                         </span>

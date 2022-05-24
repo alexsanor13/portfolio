@@ -1,6 +1,8 @@
 import './About.css';
 import { useEffect } from 'react'
 
+import CV from '../../assets/CV.pdf'
+
 export const About = () => {
 
     useEffect(() => {
@@ -22,15 +24,18 @@ export const About = () => {
         <section>
             <article id="about-content">
                 <h1>Software Engineer.</h1>
-                <p>I'm Alex Sanchez a 23 <em>yo.</em> programmer originally hailing from Spain.</p>
+                <p>I'm Alex Sanchez a 24 <em>yo.</em> programmer originally hailing from Spain.</p>
                 <br/>
                 <p>Actually focused in web solutions, as a full-stack developer. I have spent the last years learning
                     from some branches of computer science and, especially, in software development, not just as a
                     programmer but a graduate engineer.</p>
                 <br/>
-                <p>Despite not having a long career and experience, I work hard and assertively with my colleagues to
+                <p>Despite not having a long career, I work hard and assertively with my colleagues to
                     offer a satisfactory and dynamic solution.</p>
                 <br/>
+                <p>
+                    If you want to know more, check out my <a href={CV} target="_blank" rel="noopener noreferrer">resume </a>
+                </p>
                 <div id="webdev-info">
                     <div id="qualities-info">
                         <div className="hexagon-wrapped">
@@ -63,9 +68,8 @@ export const About = () => {
                             <p>Being able to look right on every device is a must nowadays. </p>
                         </div>
                     </div>
-
-                    <div id="languages">
-                        <h3>Programming skills</h3>
+                    <div id="technologies">
+                        <h3>Skills</h3>
                         <ul id="perc-graphic">
                             <li>
                                 <span className="language-name">HTML</span>
@@ -103,20 +107,6 @@ export const About = () => {
                                 </div>
                             </li>
                             <li>
-                                <span className="language-name">C++</span>
-                                <div className="language-item">
-                                    <div className='language-lvl' id='cplus-lvl'></div>
-                                    <span className="percentage"></span>
-                                </div>
-                            </li>
-                            <li>
-                                <span className="language-name">C</span>
-                                <div className="language-item">
-                                    <div className='language-lvl' id='c-lvl'></div>
-                                    <span className="percentage"></span>
-                                </div>
-                            </li>
-                            <li>
                                 <span className="language-name">React</span>
                                 <div className="language-item">
                                     <div className='language-lvl' id='react-lvl'></div>
@@ -131,9 +121,58 @@ export const About = () => {
                                 </div>
                             </li>
                             <li>
+                                <span className="language-name">Golang</span>
+                                <div className="language-item">
+                                    <div className='language-lvl' id='golang-lvl'></div>
+                                    <span className="percentage"></span>
+                                </div>
+                            </li>
+                            <li>
+                                <span className="language-name">Vue</span>
+                                <div className="language-item">
+                                    <div className='language-lvl' id='vue-lvl'></div>
+                                    <span className="percentage"></span>
+                                </div>
+                            </li>
+                            <li>
+                                <span className="language-name">C++</span>
+                                <div className="language-item">
+                                    <div className='language-lvl' id='cplus-lvl'></div>
+                                    <span className="percentage"></span>
+                                </div>
+                            </li>
+                            <li>
+                                <span className="language-name">C</span>
+                                <div className="language-item">
+                                    <div className='language-lvl' id='c-lvl'></div>
+                                    <span className="percentage"></span>
+                                </div>
+                            </li>
+                            <li>
+                                <span className="language-name">Microsoft Azure</span>
+                                <div className="language-item">
+                                    <div className='language-lvl' id='azure-lvl'></div>
+                                    <span className="percentage"></span>
+                                </div>
+                            </li>
+                            <li>
+                                <span className="language-name">Java</span>
+                                <div className="language-item">
+                                    <div className='language-lvl' id='java-lvl'></div>
+                                    <span className="percentage"></span>
+                                </div>
+                            </li>
+                            <li>
                                 <span className="language-name">Python</span>
                                 <div className="language-item">
                                     <div className='language-lvl' id='python-lvl'></div>
+                                    <span className="percentage"></span>
+                                </div>
+                            </li>
+                            <li>
+                                <span className="language-name">Docker</span>
+                                <div className="language-item">
+                                    <div className='language-lvl' id='docker-lvl'></div>
                                     <span className="percentage"></span>
                                 </div>
                             </li>

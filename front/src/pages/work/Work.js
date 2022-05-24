@@ -60,7 +60,7 @@ export const Work = () => {
                 </div>
             </article>
             <article className='project-item'>
-                <video loop autoPlay muted controls id="fullscreen-notesVideo"
+                <video loop autoPlay muted id="fullscreen-notesVideo"
                     src={notesVideo}
                     type="video/mp4"
                 />
@@ -89,13 +89,13 @@ export const Work = () => {
                         Use of Azure Services (Logic Apps) to automate the sending of emails
                         with periodic reports of the information registered on the web.
                     </p>
-                    <a href="https://github.com/Alexso47/TFG-frontend">Frontend</a>
+                    <a href="https://github.com/Alexso47/TFG-frontend" target="_blank" rel="noopener noreferrer">Frontend</a>
                     <br/>
-                    <a href="https://github.com/Alexso47/TFG-backend">Backend</a>
+                    <a href="https://github.com/Alexso47/TFG-backend" target="_blank" rel="noopener noreferrer">Backend</a>
                     <br/>
                     <p>
-                        Check out <a href={processPDF}>process </a>
-                        and <a href={paperPDF}>paper</a> (both in spanish)
+                        Check out <a href={processPDF}  target="_blank" rel="noopener noreferrer">process </a>
+                        and <a href={paperPDF}  target="_blank" rel="noopener noreferrer">paper</a> (both in spanish)
                     </p>
                     <div className="tecnologies">
                         <span><img title='html' alt='html' src={htmlLogo}/></span>

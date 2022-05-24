@@ -1,46 +1,47 @@
-#webdev-info{
+#webdev-info {
     position: relative;
     width: 100%;
     min-height: 50em;
     animation: fadeIn 1.7s;
 }
 
-#about-content{
+#about-content {
     animation: fadeIn 1.7s;
     padding-top: 4em;
 }
 
-#about-content > h1 {
+#about-content>h1 {
     padding-bottom: 0.5em;
 }
 
-#qualities-info{
+#qualities-info {
     min-height: 20em;
     position: relative;
     box-sizing: border-box;
     flex-wrap: wrap;
     display: flex;
-    animation: fadeIn  3s;
+    animation: fadeIn 3s;
     justify-content: center;
     margin-top: 2em;
     width: 50%;
     margin-bottom: 3em;
 }
 
-.hexagon-wrapped{
+.hexagon-wrapped {
     min-height: 100%;
-    flex: 20%;  
+    flex: 20%;
     justify-content: center;
     align-items: center;
     text-align: center;
     margin: 2em 1em 1em;
-    animation: pop-in 2s cubic-bezier(.41,-2,.66,3) forwards;
+    animation: pop-in 2s cubic-bezier(.41, -2, .66, 3) forwards;
 }
 
-.hexagon-wrapped > h4 {
+.hexagon-wrapped>h4 {
     margin: 3em 0 0.5em;
 }
-.hexagon-wrapped > p {
+
+.hexagon-wrapped>p {
     text-align: center;
     width: 100%;
 }
@@ -83,7 +84,7 @@
     color: rgba(0, 0, 0, 0.698);
 }
 
-#languages {
+#technologies {
     margin-bottom: 15em;
 }
 
@@ -93,7 +94,7 @@
     list-style: none;
 }
 
-#perc-graphic > li {
+#perc-graphic>li {
     display: flex;
     position: relative;
     height: 2.5em;
@@ -103,12 +104,12 @@
 }
 
 
-#perc-graphic > li > span {
+#perc-graphic>li>span {
     position: absolute;
     padding-left: 0.5em;
 }
 
-.language-item{
+.language-item {
     position: relative;
     width: 100%;
     margin-left: 10em;
@@ -133,55 +134,80 @@
 
 #html-lvl {
     width: 90%;
-    animation: growSlowHTML  4s;
+    animation: growSlowHTML 4s;
 }
 
 #css-lvl {
     width: 90%;
-    animation: growSlowCSS  4s;
+    animation: growSlowCSS 4s;
 }
 
 #js-lvl {
     width: 85%;
-    animation: growSlowJS  4s;
+    animation: growSlowJS 4s;
 }
 
-#sql-lvl{
+#sql-lvl {
     width: 80%;
-    animation: growSlowSQL  4s;
+    animation: growSlowSQL 4s;
 }
 
-#csharp-lvl{
+#csharp-lvl {
     width: 75%;
-    animation: growSlowCSharp  4s;
+    animation: growSlowCSharp 4s;
 }
 
-#cplus-lvl{
+#react-lvl {
     width: 70%;
-    animation: growSlowCPlus  4s;
-}
-
-#c-lvl{
-    width: 70%;
-    animation: growSlowC  4s;
-}
-
-#react-lvl{
-    width: 65%;
     animation: growSlowReact 4s;
 }
 
-#node-lvl{
-    width: 65%;
+#node-lvl {
+    width: 70%;
     animation: growSlowNode 4s;
 }
 
-#python-lvl{
+#cplus-lvl {
+    width: 65%;
+    animation: growSlowCPlus 4s;
+}
+
+#c-lvl {
+    width: 65%;
+    animation: growSlowC 4s;
+}
+
+#vue-lvl {
+    width: 65%;
+    animation: growSlowVue 4s;
+}
+
+#golang-lvl {
+    width: 65%;
+    animation: growSlowGolang 4s;
+}
+
+#azure-lvl {
+    width: 65%;
+    animation: growSlowAzure 4s;
+}
+
+#docker-lvl {
+    width: 60%;
+    animation: growSlowDocker 4s;
+}
+
+#python-lvl {
     width: 60%;
     animation: growSlowPython 4s;
 }
 
-#mongodb-lvl{
+#java-lvl {
+    width: 60%;
+    animation: growSlowJava 4s;
+}
+
+#mongodb-lvl {
     width: 50%;
     animation: growSlowMongoDB 4s;
 }
@@ -195,16 +221,16 @@
     bottom: 0;
 }
 
-#languages > h3{
+#technologies>h3 {
     margin-bottom: 1.5em;
 }
 
-@media screen and (max-width: 990px){
-    #about-content > p {
+@media screen and (max-width: 990px) {
+    #about-content>p {
         width: 100%;
     }
 
-    #qualities-info{
+    #qualities-info {
         width: 100%;
     }
 
@@ -214,65 +240,192 @@
 }
 
 @keyframes fadeSlow {
-    0% { opacity: 0; }
-    50% { opacity: 0; }
-    75% { opacity: 0.25; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 0.25;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes pop-in {
     0% {
-      opacity: 0;
-      transform: translateY(-4rem) scale(.7);
+        opacity: 0;
+        transform: translateY(-4rem) scale(.7);
     }
+
     100% {
-      opacity: 1;
-      transform: none;
+        opacity: 1;
+        transform: none;
     }
-  }
+}
 
 
 @keyframes growSlowHTML {
-    from { width: 0%; }
-    to { width: 90%; }
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 90%;
+    }
 }
+
 @keyframes growSlowCSS {
-    from { width: 0%; }
-    to { width: 90%; }
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 90%;
+    }
 }
+
 @keyframes growSlowJS {
-    from { width: 0%; }
-    to { width: 85%; }
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 85%;
+    }
 }
+
 @keyframes growSlowSQL {
-    from { width: 0%; }
-    to { width: 80%; }
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 80%;
+    }
 }
+
 @keyframes growSlowCSharp {
-    from { width: 0%; }
-    to { width: 75%; }
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 75%;
+    }
 }
-@keyframes growSlowCPlus {
-    from { width: 0%; }
-    to { width: 70%; }
-}
-@keyframes growSlowC {
-    from { width: 0%; }
-    to { width: 70%; }
-}
+
 @keyframes growSlowReact {
-    from { width: 0%; }
-    to { width: 65%; }
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 70%;
+    }
 }
+
 @keyframes growSlowNode {
-    from { width: 0%; }
-    to { width: 65%; }
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 70%;
+    }
 }
+
+@keyframes growSlowCPlus {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 65%;
+    }
+}
+
+@keyframes growSlowC {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 65%;
+    }
+}
+
+@keyframes growSlowVue {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 65%;
+    }
+}
+
+@keyframes growSlowGolang {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 65%;
+    }
+}
+
+@keyframes growSlowAzure {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 65%;
+    }
+}
+
+@keyframes growSlowDocker {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 60%;
+    }
+}
+
 @keyframes growSlowPython {
-    from { width: 0%; }
-    to { width: 60%; }
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 60%;
+    }
 }
+
+@keyframes growSlowJava {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 60%;
+    }
+}
+
 @keyframes growSlowMongoDB {
-    from { width: 0%; }
-    to { width: 50%; }
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 50%;
+    }
 }
