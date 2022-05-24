@@ -280,7 +280,7 @@ footer li {
       content: "";
       z-index: -1;
       background-color: #000000;
-      background-image: url("assets/Alex.jpg");
+      background-image: url("assets/home.jpg");
       background-repeat: no-repeat;
       background-position: center;
       background-size: 120vw;
@@ -439,9 +439,3 @@ footer li {
    opacity: 0;
    transform: scale(0.1, 1);
 }
-
-/* .grecaptcha-badge { visibility: hidden; }
-
-#recaptcha-msg  {
-font-size: 0.8em;
-} */
