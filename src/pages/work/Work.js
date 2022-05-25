@@ -21,7 +21,6 @@ import notesVideo from '../../assets/notes-app/notes-app.mp4'
 import countriesVideo from '../../assets/countries-app/countries-app.mp4'
 
 
-
 export const Work = () => {
 
     const toggleFullScreen = (video) => {
@@ -41,7 +40,7 @@ export const Work = () => {
     <main id="main-wrapper">
         <section id="work-content">
             <article className='project-item'>
-                <video loop autoPlay muted id="fullscreen-countriesVideo"
+                <video loop playsInline autoPlay muted id="fullscreen-countriesVideo"
                     src={countriesVideo}
                     type="video/mp4"
                 />
@@ -50,7 +49,7 @@ export const Work = () => {
                     <p>
                         You are able to search a country and some of its information as weather, population, etc.
                     </p>
-                    <p>Implemented to learn Reactjs, fetching data from APIs, etc.</p>
+                    <p>Implemented to learn Reactjs and fetching data from external APIs, among others.</p>
                     <div className="tecnologies">
                         <span><img title='react' alt='react' src={reactLogo}/></span>
                         <span><img title='node' alt='node' src={nodeLogo}/></span>
@@ -60,7 +59,7 @@ export const Work = () => {
                 </div>
             </article>
             <article className='project-item'>
-                <video loop autoPlay muted id="fullscreen-notesVideo"
+                <video loop playsInline autoPlay muted id="fullscreen-notesVideo"
                     src={notesVideo}
                     type="video/mp4"
                 />

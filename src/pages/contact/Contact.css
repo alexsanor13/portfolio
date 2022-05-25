@@ -44,6 +44,11 @@ input:focus {
     color: rgb(200, 200, 200);
 }
 
+.invalid:invalid,
+.invalid:invalid {
+    box-shadow: 0 0 5px 1px red;
+}
+
 #contact-form textarea {
     margin-bottom: 0.7em;
     font-size: 0.9em;

@@ -14,6 +14,7 @@ export const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        debugger
         if(verified){
             alert("verificado y enviado")
         }
@@ -66,7 +67,7 @@ export const Contact = () => {
                         <input name="email" id="email" type="email" placeholder="Enter your email address" maxLength="256" value={contact.email} onChange={handleEmail}
                             required />
                         <label htmlFor="message">Message:</label>
-                        <textarea name="message" placeholder="Enter your message" maxLength="2000" value={contact.message} onChange={handleMessage} required></textarea>
+                        <textarea name="message" placeholder="Enter your message" minLength="5" maxLength="2000" value={contact.message} onChange={handleMessage} required></textarea>
                         <br/>
                         <button className="btn-two" type="submit"><span>Submit</span></button>
                     </form>
