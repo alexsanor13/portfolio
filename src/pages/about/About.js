@@ -1,9 +1,10 @@
 import './About.css';
 import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 import CV from '../../assets/CV.pdf'
 
-export const About = () => {
+export const About = ({handlePage}) => {
 
     useEffect(() => {
         let timer = setTimeout(function () {
@@ -186,6 +187,7 @@ export const About = () => {
                         </ul>
                     </div>
                 </div>
+                <Link to="/work" onClick={() => handlePage('work')}><span><i className="fas fa-code-branch"></i></span> Check out my projects <span><i className="fas fa-angle-double-right"></i></span></Link>
             </article>
         </section>
     </main>

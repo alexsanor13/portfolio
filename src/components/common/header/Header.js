@@ -1,6 +1,14 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
+
+import { useEffect } from 'react';
 
 export const Header = ({handlePage}) => {
+
+	const { pathname } = useLocation();
+
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [pathname]);
 
 	const showTopNav = () => {
 		let header = document.getElementById("header");

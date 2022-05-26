@@ -23,18 +23,21 @@ import countriesVideo from '../../assets/countries-app/countries-app.mp4'
 
 export const Work = () => {
 
-    const toggleFullScreen = (video) => {
+    const toggleFullScreen =  (video) => {
         let el = document.getElementById("fullscreen-"+video+"Video");
         if (el.requestFullscreen) {
           el.requestFullscreen();
         } else if (el.msRequestFullscreen) {
           el.msRequestFullscreen();
         } else if (el.mozRequestFullScreen) {
-          el.mozRequestFullScreen();
+          el.mozRequestFullScreen(); 
         } else if (el.webkitRequestFullscreen) {
           el.webkitRequestFullscreen();
+        } else {
+            alert("Fullscreen not available")
         }
     };
+    
 
   return (
     <main id="main-wrapper">

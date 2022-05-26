@@ -47,6 +47,7 @@
 }
 
 .hexagon {
+    border-radius: 1px;
     margin: 0 auto;
     width: 100px;
     height: 57.735px;
@@ -58,34 +59,37 @@
 .hexagon::before {
     content: "";
     position: absolute;
-    top: -28.8675px;
+    top: -28.5px;
     left: 0;
     width: 0;
     height: 0;
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
     border-bottom: 28.8675px solid #8bffe2;
+    border-radius: 2px;
 }
 
 .hexagon::after {
     content: "";
     position: absolute;
-    bottom: -28.8675px;
+    bottom: -28px;
     left: 0;
     width: 0;
     height: 0;
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
     border-top: 28.8675px solid #8bffe2;
+    border-radius: 2px;
 }
 
 .hexagon i {
+    margin-top: 5px;
     font-size: 2.5em;
     color: rgba(0, 0, 0, 0.698);
 }
 
 #technologies {
-    margin-bottom: 15em;
+    margin-bottom: 5em;
 }
 
 #perc-graphic {
@@ -226,6 +230,10 @@
 }
 
 @media screen and (max-width: 990px) {
+    .hexagon::before {
+        top: -28px;
+    }
+
     #about-content>p {
         width: 100%;
     }

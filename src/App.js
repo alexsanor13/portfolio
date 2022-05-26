@@ -46,7 +46,7 @@ function App() {
 				<Header handlePage={handlePage}/>
 				<Switch>
 					<Route exact path="/" render={()=> <Home handlePage={handlePage} />} />
-					<Route path="/about" component={About} />
+					<Route path="/about" render={()=> <About handlePage={handlePage} />} />
 					<Route path="/work" component={Work} />
 					<Route path="/blog" component={Blog} />
 					<Route path="/contact" component={Contact} />
