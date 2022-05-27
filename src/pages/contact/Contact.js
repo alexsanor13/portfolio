@@ -1,5 +1,6 @@
 import './Contact.css';
 import { useState } from 'react'
+import sendEmail from '../../services/email.js'
 
 
 const INITIAL_CONTACT = {
@@ -10,21 +11,17 @@ const INITIAL_CONTACT = {
 
 export const Contact = () => {
     const [contact, setContact] = useState(INITIAL_CONTACT)
-    const [verified, setVerified] = useState(false)
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        debugger
-        if(verified){
-            alert("verificado y enviado")
-        }
-        else{
-            alert("no verificado")
-        }
         
+        let res = await sendEmail(contact)
+        if(res.data === 'Message sent' && res.status === 200) {
+            alert('email sent')
+        }
+
         console.log(contact)
         setContact(INITIAL_CONTACT)
-        setVerified(false)
     }
 
     const handleName = (e) => {
