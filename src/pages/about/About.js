@@ -25,9 +25,9 @@ export const About = ({handlePage}) => {
         <section>
             <article id="about-content">
                 <h1>Software Engineer.</h1>
-                <p>I'm Alex Sanchez a 24 <em>yo.</em> programmer originally hailing from Spain.</p>
+                <p>Alex Sanchez is a 24 <em>yo.</em> programmer originally hailing from Spain.</p>
                 <br/>
-                <p>Actually focused in web solutions, as a full-stack developer. I have spent the last years learning
+                <p>Currently focused in web solutions, as a full-stack developer. I have spent the last years learning
                     from some branches of computer science and, especially, in software development, not just as a
                     programmer but a graduate engineer.</p>
                 <br/>
