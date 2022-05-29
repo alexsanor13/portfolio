@@ -12,8 +12,10 @@ import { Contact } from './pages/contact/Contact.js'
 
 function App() {
 	const [currentPage, setPage] = useState(window.location.href)
+	const title = "Portfolio Alex"
 
 	useEffect(() => {
+		document.title = title;
 		let docs = []
 		docs = docs.concat(document.getElementById('home-page'));
 		docs = docs.concat(document.getElementById('about-page'));
@@ -32,7 +34,7 @@ function App() {
 				}
 			}
 		})
-	}, [currentPage])
+	}, [currentPage, title])
 
 	const handlePage = (page) => {
 		setPage(page)
