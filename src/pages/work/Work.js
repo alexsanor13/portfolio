@@ -19,6 +19,7 @@ import mongodbLogo from '../../assets/technologies/mongodb.png'
 
 import notesVideo from '../../assets/notes-app/notes-app.mp4'
 import countriesVideo from '../../assets/countries-app/countries-app.mp4'
+import pongVideo from '../../assets/pong-game/pong-game.mp4'
 
 
 export const Work = () => {
@@ -111,7 +112,27 @@ export const Work = () => {
                         <span><img title='logic apps' alt='logic apps' src={logicAppsLogo}/></span>
                     </div>
                 </div>
-            </article>    
+            </article>
+            <article className='project-item'>
+                <video loop playsInline autoPlay muted id="fullscreen-pongVideo"
+                    src={pongVideo}
+                    type="video/mp4"
+                />
+                <div className='project-info'>
+                <h3>Pong</h3>
+                    <p>
+                        Classic game developed with vanilla javascript, html and css.
+                    </p>
+                    <br/>
+                    <div className="tecnologies">
+                        <span><img title='html' alt='html' src={htmlLogo}/></span>
+                        <span><img title='css' alt='css' src={cssLogo}/></span>
+                        <span><img title='javascript' alt='javascript' src={jsLogo}/></span>
+                    </div>
+                    <br/>
+                    <button className='btn-two small' onClick={() => toggleFullScreen("pong")}>Fullscreen</button>
+                </div>
+            </article>
         </section>
     </main>
   );

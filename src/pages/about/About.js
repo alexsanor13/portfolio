@@ -20,19 +20,18 @@ export const About = ({handlePage}) => {
         return () => clearTimeout(timer);
     } , [])
 
+    const nEdad = Math.floor((new Date() - new Date('1997-09-13'))/1000/60/60/24/365);
+
   return (
     <main id="main-wrapper">
         <section>
             <article id="about-content">
                 <h1>Software Engineer.</h1>
-                <p>Alex Sanchez is a 24 <em>yo.</em> programmer originally hailing from Spain.</p>
+                <p>Alex Sanchez is a  {nEdad}<em>yo.</em> programmer originally hailing from Spain.</p>
                 <br/>
                 <p>Currently focused in web solutions, as a full-stack developer. I have spent the last years learning
-                    from some branches of computer science and, especially, in software development, not just as a
+                    from some fields of computer science and, especially, in software development, not just as a
                     programmer but a graduate engineer.</p>
-                <br/>
-                <p>Despite not having a long career, I work hard and assertively with my colleagues to
-                    offer a satisfactory and dynamic solution.</p>
                 <br/>
                 <p>
                     If you want to know more, check out my <a href={CV} target="_blank" rel="noopener noreferrer">resume </a>
