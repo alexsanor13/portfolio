@@ -1,3 +1,22 @@
+:root {
+    --percentageTo_html: 90%;
+    --percentageTo_css: 90%;
+    --percentageTo_js: 85%;
+    --percentageTo_sql: 80%;
+    --percentageTo_csharp: 75%;
+    --percentageTo_react: 70%;
+    --percentageTo_node: 70%;
+    --percentageTo_cplus: 65%;
+    --percentageTo_c: 65%;
+    --percentageTo_vue: 65%;
+    --percentageTo_golang: 65%;
+    --percentageTo_azure: 65%;
+    --percentageTo_docker: 60%;
+    --percentageTo_python: 60%;
+    --percentageTo_java: 60%;
+    --percentageTo_mongodb: 50%;
+}
+
 #webdev-info {
     position: relative;
     width: 100%;
@@ -136,84 +155,10 @@
     animation: fadeSlow ease-in 5.25s;
 }
 
-#html-lvl {
-    width: 90%;
-    animation: growSlowHTML 4s;
-}
-
-#css-lvl {
-    width: 90%;
-    animation: growSlowCSS 4s;
-}
-
-#js-lvl {
-    width: 85%;
-    animation: growSlowJS 4s;
-}
-
-#sql-lvl {
-    width: 80%;
-    animation: growSlowSQL 4s;
-}
-
-#csharp-lvl {
-    width: 75%;
-    animation: growSlowCSharp 4s;
-}
-
-#react-lvl {
-    width: 70%;
-    animation: growSlowReact 4s;
-}
-
-#node-lvl {
-    width: 70%;
-    animation: growSlowNode 4s;
-}
-
-#cplus-lvl {
-    width: 65%;
-    animation: growSlowCPlus 4s;
-}
-
-#c-lvl {
-    width: 65%;
-    animation: growSlowC 4s;
-}
-
-#vue-lvl {
-    width: 65%;
-    animation: growSlowVue 4s;
-}
-
-#golang-lvl {
-    width: 65%;
-    animation: growSlowGolang 4s;
-}
-
-#azure-lvl {
-    width: 65%;
-    animation: growSlowAzure 4s;
-}
-
-#docker-lvl {
-    width: 60%;
-    animation: growSlowDocker 4s;
-}
-
-#python-lvl {
-    width: 60%;
-    animation: growSlowPython 4s;
-}
-
-#java-lvl {
-    width: 60%;
-    animation: growSlowJava 4s;
-}
-
-#mongodb-lvl {
-    width: 50%;
-    animation: growSlowMongoDB 4s;
+.language-logo {
+    width: 20px;
+    height: 20px;
+    margin: auto 0.5em auto 0em;
 }
 
 .language-lvl {
@@ -246,7 +191,7 @@
         width: 100%;
     }
 }
-
+ 
 @keyframes fadeSlow {
     0% {
         opacity: 0;
@@ -277,163 +222,162 @@
     }
 }
 
-
-@keyframes growSlowHTML {
+@keyframes growSlow_html {
     from {
         width: 0%;
     }
 
     to {
-        width: 90%;
+        width: var(--percentageTo_html);
     }
 }
 
-@keyframes growSlowCSS {
+@keyframes growSlow_css {
     from {
         width: 0%;
     }
 
     to {
-        width: 90%;
+        width: var(--percentageTo_css);
     }
 }
 
-@keyframes growSlowJS {
+@keyframes growSlow_js {
     from {
         width: 0%;
     }
 
     to {
-        width: 85%;
+        width: var(--percentageTo_js);
     }
 }
 
-@keyframes growSlowSQL {
+@keyframes growSlow_sql {
     from {
         width: 0%;
     }
 
     to {
-        width: 80%;
+        width: var(--percentageTo_sql);
     }
 }
 
-@keyframes growSlowCSharp {
+@keyframes growSlow_csharp {
     from {
         width: 0%;
     }
 
     to {
-        width: 75%;
+        width: var(--percentageTo_csharp);
     }
 }
 
-@keyframes growSlowReact {
+@keyframes growSlow_react {
     from {
         width: 0%;
     }
 
     to {
-        width: 70%;
+        width: var(--percentageTo_react);
     }
 }
 
-@keyframes growSlowNode {
+@keyframes growSlow_node {
     from {
         width: 0%;
     }
 
     to {
-        width: 70%;
+        width: var(--percentageTo_node);
     }
 }
 
-@keyframes growSlowCPlus {
+@keyframes growSlow_cplus {
     from {
         width: 0%;
     }
 
     to {
-        width: 65%;
+        width: var(--percentageTo_cplus);
     }
 }
 
-@keyframes growSlowC {
+@keyframes growSlow_c {
     from {
         width: 0%;
     }
 
     to {
-        width: 65%;
+        width: var(--percentageTo_c);
     }
 }
 
-@keyframes growSlowVue {
+@keyframes growSlow_vue {
     from {
         width: 0%;
     }
 
     to {
-        width: 65%;
+        width: var(--percentageTo_vue);
     }
 }
 
-@keyframes growSlowGolang {
+@keyframes growSlow_golang {
     from {
         width: 0%;
     }
 
     to {
-        width: 65%;
+        width: var(--percentageTo_golang);
     }
 }
 
-@keyframes growSlowAzure {
+@keyframes growSlow_azure {
     from {
         width: 0%;
     }
 
     to {
-        width: 65%;
+        width: var(--percentageTo_azure);
     }
 }
 
-@keyframes growSlowDocker {
+@keyframes growSlow_docker {
     from {
         width: 0%;
     }
 
     to {
-        width: 60%;
+        width: var(--percentageTo_docker);
     }
 }
 
-@keyframes growSlowPython {
+@keyframes growSlow_python {
     from {
         width: 0%;
     }
 
     to {
-        width: 60%;
+        width: var(--percentageTo_python);
     }
 }
 
-@keyframes growSlowJava {
+@keyframes growSlow_java {
     from {
         width: 0%;
     }
 
     to {
-        width: 60%;
+        width: var(--percentageTo_java);
     }
 }
 
-@keyframes growSlowMongoDB {
+@keyframes growSlow_mongodb {
     from {
         width: 0%;
     }
 
     to {
-        width: 50%;
+        width: var(--percentageTo_mongodb);
     }
 }

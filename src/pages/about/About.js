@@ -1,24 +1,68 @@
 import './About.css';
-import { useEffect } from 'react'
+import { useEffect, useMemo } from 'react'
 import { Link } from 'react-router-dom'
+
 
 import CV from '../../assets/CV.pdf'
 
+import htmlLogo from '../../assets/technologies/html.png'
+import cssLogo from '../../assets/technologies/css.png'
+import jsLogo from '../../assets/technologies/javascript.png'
+import csharpLogo from '../../assets/technologies/csharp.png'
+import sqlServerLogo from '../../assets/technologies/sqlserver.png'
+import azureLogo from '../../assets/technologies/azure.png'
+import reactLogo from '../../assets/technologies/react.png'
+import nodeLogo from '../../assets/technologies/node.png'
+import mongodbLogo from '../../assets/technologies/mongodb.png'
+import pythonLogo from '../../assets/technologies/python.png'
+import vueLogo from '../../assets/technologies/vuejs.png'
+import javaLogo from '../../assets/technologies/java.png'
+import golangLogo from '../../assets/technologies/mongodb.png'
+import dockerLogo from '../../assets/technologies/docker.png'
+import cLogo from '../../assets/technologies/c.png'
+import cplusLogo from '../../assets/technologies/cplus.png'
+
 export const About = ({handlePage}) => {
+
+    const techList = useMemo(() => {
+        return [
+            {id: "html", text:"HTML", logo: htmlLogo, lvl: 90},
+            {id: "css", text:"CSS", logo: cssLogo, lvl: 90},
+            {id: "js", text:"Javascript", logo: jsLogo, lvl: 85},
+            {id: "sql", text:"SQL", logo: sqlServerLogo, lvl: 80},
+            {id: "csharp", text:"C#", logo: csharpLogo, lvl: 75},
+            {id: "react", text:"ReactJS", logo: reactLogo, lvl: 70},
+            {id: "node", text:"NodeJS", logo: nodeLogo, lvl: 70},
+            {id: "golang", text:"Golang", logo: golangLogo, lvl: 65},
+            {id: "vue", text:"VueJS", logo: vueLogo, lvl: 65},
+            {id: "cplus", text:"C++", logo: cplusLogo, lvl: 65},
+            {id: "c", text:"C", logo: cLogo, lvl: 65},
+            {id: "azure", text:"Microsoft Azure", logo: azureLogo, lvl: 65},
+            {id: "java", text:"Java", logo: javaLogo, lvl: 60},
+            {id: "python", text:"Python", logo: pythonLogo, lvl: 60},
+            {id: "docker", text:"Docker", logo: dockerLogo, lvl: 60},
+            {id: "mongodb", text:"MongoDB", logo: mongodbLogo, lvl: 50}
+        ]
+        },[]);
 
     useEffect(() => {
         let timer = setTimeout(function () {
             let lis = document.getElementById('perc-graphic').getElementsByTagName('li');
             for (const e of lis) {
                 let percentage = e.getElementsByClassName('percentage')[0];
-                let level = e.getElementsByClassName('language-lvl')[0].clientWidth;
-                let container = e.getElementsByClassName('language-item')[0].clientWidth;
-                let realPerc = ((level / container) * 100);
-                percentage.innerHTML = Math.round(realPerc).toString() + '%';
+                let languageLvl = e.getElementsByClassName('language-lvl');
+                let language = '';
+                if (languageLvl.length > 0 
+                    && typeof(languageLvl[0].id) !== 'undefined' 
+                    && languageLvl[0].id.split('-').length > 0)
+                {
+                    language = languageLvl[0].id.split('-')[0]
+                }
+                percentage.innerHTML = techList.find(el => el.id === language).lvl + '%';
             }
         }, 4100)
         return () => clearTimeout(timer);
-    } , [])
+    } , [techList])
 
     const nEdad = Math.floor((new Date() - new Date('1997-09-13'))/1000/60/60/24/365);
 
@@ -27,7 +71,7 @@ export const About = ({handlePage}) => {
         <section>
             <article id="about-content">
                 <h1>Software Engineer.</h1>
-                <p>Alex Sanchez is a  {nEdad}<em>yo.</em> programmer originally hailing from Spain.</p>
+                <p>Alex Sanchez is a {nEdad}<em> yo.</em> programmer originally hailing from Spain.</p>
                 <br/>
                 <p>Currently focused in web solutions, as a full-stack developer. I have spent the last years learning
                     from some fields of computer science and, especially, in software development, not just as a
@@ -71,118 +115,26 @@ export const About = ({handlePage}) => {
                     <div id="technologies">
                         <h3>Skills</h3>
                         <ul id="perc-graphic">
-                            <li>
-                                <span className="language-name">HTML</span>
-                                <div className="language-item">
-                                    <div className='language-lvl' id='html-lvl'></div>
-                                    <span className="percentage"></span>
-                                </div>
-                            </li>
-                            <li>
-                                <span className="language-name">CSS</span>
-                                <div className="language-item">
-                                    <div className='language-lvl' id='css-lvl'></div>
-                                    <span className="percentage"></span>
-                                </div>
-                            </li>
-                            <li>
-                                <span className="language-name">Javascript</span>
-                                <div className="language-item">
-                                    <div className='language-lvl' id='js-lvl'></div>
-                                    <span className="percentage"></span>
-                                </div>
-                            </li>
-                            <li>
-                                <span className="language-name">SQL</span>
-                                <div className="language-item">
-                                    <div className='language-lvl' id='sql-lvl'></div>
-                                    <span className="percentage"></span>
-                                </div>
-                            </li>
-                            <li>
-                                <span className="language-name">C#</span>
-                                <div className="language-item">
-                                    <div className='language-lvl' id='csharp-lvl'></div>
-                                    <span className="percentage"></span>
-                                </div>
-                            </li>
-                            <li>
-                                <span className="language-name">React</span>
-                                <div className="language-item">
-                                    <div className='language-lvl' id='react-lvl'></div>
-                                    <span className="percentage"></span>
-                                </div>
-                            </li>
-                            <li>
-                                <span className="language-name">Node (Express)</span>
-                                <div className="language-item">
-                                    <div className='language-lvl' id='node-lvl'></div>
-                                    <span className="percentage"></span>
-                                </div>
-                            </li>
-                            <li>
-                                <span className="language-name">Golang</span>
-                                <div className="language-item">
-                                    <div className='language-lvl' id='golang-lvl'></div>
-                                    <span className="percentage"></span>
-                                </div>
-                            </li>
-                            <li>
-                                <span className="language-name">Vue</span>
-                                <div className="language-item">
-                                    <div className='language-lvl' id='vue-lvl'></div>
-                                    <span className="percentage"></span>
-                                </div>
-                            </li>
-                            <li>
-                                <span className="language-name">C++</span>
-                                <div className="language-item">
-                                    <div className='language-lvl' id='cplus-lvl'></div>
-                                    <span className="percentage"></span>
-                                </div>
-                            </li>
-                            <li>
-                                <span className="language-name">C</span>
-                                <div className="language-item">
-                                    <div className='language-lvl' id='c-lvl'></div>
-                                    <span className="percentage"></span>
-                                </div>
-                            </li>
-                            <li>
-                                <span className="language-name">Microsoft Azure</span>
-                                <div className="language-item">
-                                    <div className='language-lvl' id='azure-lvl'></div>
-                                    <span className="percentage"></span>
-                                </div>
-                            </li>
-                            <li>
-                                <span className="language-name">Java</span>
-                                <div className="language-item">
-                                    <div className='language-lvl' id='java-lvl'></div>
-                                    <span className="percentage"></span>
-                                </div>
-                            </li>
-                            <li>
-                                <span className="language-name">Python</span>
-                                <div className="language-item">
-                                    <div className='language-lvl' id='python-lvl'></div>
-                                    <span className="percentage"></span>
-                                </div>
-                            </li>
-                            <li>
-                                <span className="language-name">Docker</span>
-                                <div className="language-item">
-                                    <div className='language-lvl' id='docker-lvl'></div>
-                                    <span className="percentage"></span>
-                                </div>
-                            </li>
-                            <li>
-                                <span className="language-name">MongoDB</span>
-                                <div className="language-item">
-                                    <div className='language-lvl' id='mongodb-lvl'></div>
-                                    <span className="percentage"></span>
-                                </div>
-                            </li>
+                        {techList.map(listElement => 
+                        {
+                            const elementId = listElement.id + '-lvl'
+                            const width = listElement.lvl + '%'
+
+                            const animation = `growSlow_${listElement.id} 4s`
+
+                            return  <li key={listElement.id}>
+                                        <span className="language-name">
+                                            {listElement.logo === "" 
+                                            ? ''
+                                            : <img className="language-logo" src={listElement.logo} alt={listElement.text}></img>}
+                                            {listElement.text}
+                                        </span>
+                                        <div className="language-item">
+                                            <div className='language-lvl' id={elementId} style={{"width": width, "animation": animation}}></div>
+                                            <span className="percentage"></span>
+                                        </div>
+                                    </li>
+                        })}
                         </ul>
                     </div>
                 </div>
