@@ -1,5 +1,4 @@
 import './About.css';
-import { useEffect, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 
 
@@ -23,46 +22,34 @@ import cLogo from '../../assets/technologies/c.png'
 import cplusLogo from '../../assets/technologies/cplus.png'
 
 export const About = ({handlePage}) => {
+    
+    const techList = [
+        {id: "html", text:"HTML", logo: htmlLogo, lvl: 90},
+        {id: "css", text:"CSS", logo: cssLogo, lvl: 90},
+        {id: "js", text:"Javascript", logo: jsLogo, lvl: 85},
+        {id: "sql", text:"SQL", logo: sqlServerLogo, lvl: 80},
+        {id: "csharp", text:"C#", logo: csharpLogo, lvl: 75},
+        {id: "react", text:"ReactJS", logo: reactLogo, lvl: 70},
+        {id: "node", text:"NodeJS", logo: nodeLogo, lvl: 70},
+        {id: "golang", text:"Golang", logo: golangLogo, lvl: 65},
+        {id: "vue", text:"VueJS", logo: vueLogo, lvl: 65},
+        {id: "cplus", text:"C++", logo: cplusLogo, lvl: 65},
+        {id: "c", text:"C", logo: cLogo, lvl: 65},
+        {id: "azure", text:"Microsoft Azure", logo: azureLogo, lvl: 65},
+        {id: "java", text:"Java", logo: javaLogo, lvl: 60},
+        {id: "python", text:"Python", logo: pythonLogo, lvl: 60},
+        {id: "docker", text:"Docker", logo: dockerLogo, lvl: 60},
+        {id: "mongodb", text:"MongoDB", logo: mongodbLogo, lvl: 50}
+    ];
 
-    const techList = useMemo(() => {
-        return [
-            {id: "html", text:"HTML", logo: htmlLogo, lvl: 90},
-            {id: "css", text:"CSS", logo: cssLogo, lvl: 90},
-            {id: "js", text:"Javascript", logo: jsLogo, lvl: 85},
-            {id: "sql", text:"SQL", logo: sqlServerLogo, lvl: 80},
-            {id: "csharp", text:"C#", logo: csharpLogo, lvl: 75},
-            {id: "react", text:"ReactJS", logo: reactLogo, lvl: 70},
-            {id: "node", text:"NodeJS", logo: nodeLogo, lvl: 70},
-            {id: "golang", text:"Golang", logo: golangLogo, lvl: 65},
-            {id: "vue", text:"VueJS", logo: vueLogo, lvl: 65},
-            {id: "cplus", text:"C++", logo: cplusLogo, lvl: 65},
-            {id: "c", text:"C", logo: cLogo, lvl: 65},
-            {id: "azure", text:"Microsoft Azure", logo: azureLogo, lvl: 65},
-            {id: "java", text:"Java", logo: javaLogo, lvl: 60},
-            {id: "python", text:"Python", logo: pythonLogo, lvl: 60},
-            {id: "docker", text:"Docker", logo: dockerLogo, lvl: 60},
-            {id: "mongodb", text:"MongoDB", logo: mongodbLogo, lvl: 50}
-        ]
-        },[]);
+    const handleMouseOver = (e, id) => {
+        document.getElementById(id+'-percentage').innerText = techList.find(e => e.id === id).lvl + '%';
 
-    useEffect(() => {
-        let timer = setTimeout(function () {
-            let lis = document.getElementById('perc-graphic').getElementsByTagName('li');
-            for (const e of lis) {
-                let percentage = e.getElementsByClassName('percentage')[0];
-                let languageLvl = e.getElementsByClassName('language-lvl');
-                let language = '';
-                if (languageLvl.length > 0 
-                    && typeof(languageLvl[0].id) !== 'undefined' 
-                    && languageLvl[0].id.split('-').length > 0)
-                {
-                    language = languageLvl[0].id.split('-')[0]
-                }
-                percentage.innerHTML = techList.find(el => el.id === language).lvl + '%';
-            }
-        }, 4100)
-        return () => clearTimeout(timer);
-    } , [techList])
+    }
+
+    const handleMouseOut = (e, id) => {
+        document.getElementById(id+'-percentage').innerText = ''
+    }
 
     const nEdad = Math.floor((new Date() - new Date('1997-09-13'))/1000/60/60/24/365);
 
@@ -129,9 +116,9 @@ export const About = ({handlePage}) => {
                                             : <img className="language-logo" src={listElement.logo} alt={listElement.text}></img>}
                                             {listElement.text}
                                         </span>
-                                        <div className="language-item">
+                                        <div className="language-item" onMouseOver={(e) => handleMouseOver(e,listElement.id)} onMouseOut={(e) => handleMouseOut(e,listElement.id)}>
                                             <div className='language-lvl' id={elementId} style={{"width": width, "animation": animation}}></div>
-                                            <span className="percentage"></span>
+                                            <span className="percentage" id={listElement.id + '-percentage'}></span>   
                                         </div>
                                     </li>
                         })}

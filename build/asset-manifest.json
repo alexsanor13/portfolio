@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.0dbb3a5f.css",
-    "main.js": "/static/js/main.f6df0845.js",
+    "main.css": "/static/css/main.90046d56.css",
+    "main.js": "/static/js/main.e552550b.js",
     "static/media/notes-app.mp4": "/static/media/notes-app.95d2769be7a9367a70fc.mp4",
     "static/media/countries-app.mp4": "/static/media/countries-app.a26692f1b123c1e885fa.mp4",
     "static/media/dfp_process.pdf": "/static/media/dfp_process.50a142ba74be45d50edc.pdf",
@@ -9,7 +9,7 @@
     "static/media/pong-game.mp4": "/static/media/pong-game.de34191398facd8bf831.mp4",
     "static/media/home.jpg": "/static/media/home.1851ed8d47d9beda3533.jpg",
     "static/media/home2.jpg": "/static/media/home2.7185c5027e9da27d005a.jpg",
-    "static/media/CV.pdf": "/static/media/CV.441a2b52b386b5cf847e.pdf",
+    "static/media/CV.pdf": "/static/media/CV.84234fd0d33cd8bd1747.pdf",
     "static/media/c.png": "/static/media/c.5d43b367ce33ecb5f41b.png",
     "static/media/react.png": "/static/media/react.a544fd8cf64d82898e91.png",
     "static/media/java.png": "/static/media/java.fdabd4e11f1235e4e8e0.png",
@@ -27,11 +27,11 @@
     "static/media/html.png": "/static/media/html.4029fee37a2169b113a5.png",
     "static/media/azure.png": "/static/media/azure.444ba1170c4ccd0e55c8.png",
     "index.html": "/index.html",
-    "main.0dbb3a5f.css.map": "/static/css/main.0dbb3a5f.css.map",
-    "main.f6df0845.js.map": "/static/js/main.f6df0845.js.map"
+    "main.90046d56.css.map": "/static/css/main.90046d56.css.map",
+    "main.e552550b.js.map": "/static/js/main.e552550b.js.map"
   },
   "entrypoints": [
-    "static/css/main.0dbb3a5f.css",
-    "static/js/main.f6df0845.js"
+    "static/css/main.90046d56.css",
+    "static/js/main.e552550b.js"
   ]
 }

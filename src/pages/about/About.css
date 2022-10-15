@@ -42,8 +42,8 @@
     animation: fadeIn 3s;
     justify-content: center;
     margin-top: 2em;
-    width: 50%;
-    margin-bottom: 3em;
+    width: 100%;
+    margin-bottom: 1em;
 }
 
 .hexagon-wrapped {
@@ -112,7 +112,7 @@
 }
 
 #perc-graphic {
-    width: 70%;
+    width: 100%;
     background-color: #13141434;
     list-style: none;
 }
@@ -137,8 +137,8 @@
     width: 100%;
     margin-left: 10em;
     height: 80%;
-    border: black solid 1.5px;
-    background-color: rgba(0, 0, 0, 0.657);
+    /* border: black solid 1.5px;
+    background-color: rgba(0, 0, 0, 0.657); */
     margin-right: 1em;
     padding-left: 0.2em;
 }
@@ -146,7 +146,6 @@
 .percentage {
     position: absolute;
     margin: auto;
-    top: 0;
     bottom: 0;
     text-align: center;
     width: 100%;
